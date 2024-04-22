@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Shop
+        link(rel="stylesheet", href="/shop.css")
+        link(rel="stylesheet", href="/product.css")
+    body 
+        header.main-header
+            nav.nav-bar 
+                ul.nav-item-list
+                    li.nav-item
+                        a(href="/" , class=(path === '/' ? 'active' : '')) shop
+                    li.nav-item
+                        a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) add-product 
+    block content 
