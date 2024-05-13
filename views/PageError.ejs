@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=pageTitle %></title>
-    <link rel="stylesheet" href="/shop.css">
-    <link rel="stylesheet" href="/product.css">
-</head>
-<body>
-    <header class="main-header">
-        <nav class="nav-bar">
-         <ul class="nav-item-list">
-             <li class="nav-item">
-                 <a class="active" href="/">Shop</a>
-             </li>
-             <li class="nav-item">
-                 <a href="/admin/add-product">Add product</a>
-             </li>
-         </ul>
-        </nav> 
-     </header>
+<%- include('./includes/head.ejs') %>
+<%- include('./includes/navigation.ejs') %>
     <h1>Page Not Found!</h1>
-</body>
-</html>
+<%- include('./includes/end.ejs') %>

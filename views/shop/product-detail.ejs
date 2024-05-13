@@ -1,0 +1,24 @@
+<%- include('../includes/head.ejs') %>
+    <%- include('../includes/navigation.ejs') %>
+        <% if (prods) { %>
+            <main class="centered">
+                <h1 class="detail-head">
+                    <%= prods.title %>
+                </h1>
+                <hr>
+                <div class="detail-img">
+                    <img src="<%= prods.imageUrl %>" alt="<%= prods.product%>">
+                </div>
+                <h2 class="detail-price">
+                    <%= prods.price %>
+                </h2>
+                <hr>
+                <p class="detail-dsrp">
+                    <%=prods.description %>
+                </p>
+                <%- include('../includes/addtoCart.ejs', {prods:prods}) %>
+            </main>
+            <% } else{%>
+                <h1>no product found</h1>
+                <%}%>
+                    <%- include('../includes/end.ejs') %>

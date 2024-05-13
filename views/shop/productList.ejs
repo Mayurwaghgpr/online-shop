@@ -1,0 +1,38 @@
+<%- include('../includes/head.ejs') %>
+    <%- include('../includes/navigation.ejs') %>
+        <main>
+
+            <% if (prods.length>0) { %>
+
+                <div class="grid">
+                    <% prods.forEach(prods=> {%>
+                        <article class="card product-item">
+                            <header class="card__header">
+                                <h1 class="product__title">
+                                    <%= prods.product %>
+                                </h1>
+                            </header>
+                            <div class="card__image">
+                                <img src="<%= prods.imageUrl %>" alt="<%= prods.product %>">
+                            </div>
+                            <div class="card__content">
+                                <h2 class="product__price">&#x20B9;<%= prods.price %>
+                                </h2>
+                                <p class="product__description">
+                                    <%= prods.description %>
+                                </p>
+                            </div>
+                            <div class="card__actions">
+                                <a href="/products/<%=prods._id %>" class="btn Ebtn">details</a>
+                                <%- include('../includes/addtoCart.ejs',{prods:prods}) %>
+
+                            </div>
+                        </article>
+                        <% }); %>
+                </div>
+
+                <% } else { %>
+                    <h1>No products</h1>
+                    <%}%>
+        </main>
+        <%- include('../includes/end.ejs') %>

@@ -1,12 +1,13 @@
-.product-form{
+.product-form {
     width: 20rem;
     max-width: 90%;
     margin: auto;
 }
+
 .product-item {
     width: 20rem;
     max-width: 95%;
-   
+
 }
 
 .product__title {
@@ -23,3 +24,18 @@
 .product__description {
     text-align: center;
 }
+
+.detail-head {}
+
+.detail-img {
+    display: flex;
+    justify-content: center;
+}
+
+.detail-img img {
+    max-width: 700px;
+}
+
+.detail-price {}
+
+.detail-dsrp {}
